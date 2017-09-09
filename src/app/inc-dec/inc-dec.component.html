@@ -1,0 +1,5 @@
+<div>
+  <button (click)="action$.next({ type: 'INC' })">+</button>
+  <button (click)="action$.next({ type: 'DEC' })">-</button>
+  <output>{{ state$ | async }}</output>
+</div>

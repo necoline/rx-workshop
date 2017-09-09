@@ -1,0 +1,7 @@
+<div>
+  <app-ticker-lookup (select)="addTicker($event)"></app-ticker-lookup>
+  <div *ngFor="let ticker of tickers">
+    <h3>{{ticker.symbol}} - {{ticker.name}} <button (click)="removeTicker(ticker)">remove</button></h3>
+    <app-ticker [symbol]="ticker.symbol"></app-ticker>
+  </div>
+</div>

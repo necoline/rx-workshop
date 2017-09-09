@@ -1,0 +1,10 @@
+<div>
+  <input #search type="text" (input)="searchChange$.next(search.value)"/>
+  <div *ngIf="selection$ | async as selections">
+    <ul>
+      <li *ngFor="let selection of selections">
+        <a (click)="select.next(selection)">{{selection.symbol}} - {{selection.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
